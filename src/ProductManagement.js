@@ -590,23 +590,24 @@ return (
         )}
         {activeSection === 'report-charts' && (
           <div>
-            <br></br>
-            <br></br>
-            <br></br>
-            {/* Your existing content for 'transaction-report' */}
+          <br></br>
+          <br></br>
+          <br></br>
+          {/* Your existing content for 'transaction-report' */}
 
-            <div className="chart-container">
-              <h2>Stock Chart</h2>
-              {/* Pass the products data to the StockChart component */}
-              <StockChart products={products} />
-            </div>
-
-            <div className="chart-container">
-              <h2>Sales Chart</h2>
-              {/* Pass the transactions data to the SalesChart component */}
-              <SalesChart transactions={transactions} />
-            </div>
+          <div className="chart-container" style={{ width: '60%', margin: '0 auto' }}>
+            <h2>Stock Chart</h2>
+            {/* Pass the products data to the StockChart component */}
+            <StockChart products={products} />
           </div>
+
+          <div className="chart-container" style={{ width: '60%', margin: '0 auto' }}>
+            <h2>Sales Chart</h2>
+            {/* Pass the transactions data to the SalesChart component */}
+            <SalesChart transactions={transactions} />
+          </div>
+        </div>
+
         )}
       </div>
     </div>
