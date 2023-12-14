@@ -1,0 +1,50 @@
+  return (
+    <div>
+      {/* Navbar */}
+      <Navbar bg="danger" variant="dark" expand="lg">
+        <Navbar.Brand href="#home" className='mx-5 col-7'>JOLLIBEE</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Nav className="mr-auto">
+            <Nav.Link onClick={() => handleSectionChange('product-management')}>Product Management</Nav.Link>
+            <Nav.Link onClick={() => handleSectionChange('stock-list')}>Stock List</Nav.Link>
+            <Nav.Link onClick={() => handleSectionChange('transaction-management')}>Transaction Management</Nav.Link>
+            <Nav.Link onClick={() => handleSectionChange('transaction-report')}>Transaction Report</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+
+      <div className="container mt-5">
+        {/* Content based on activeSection */}
+        {activeSection === 'product-management' && (
+          <div>
+            {/* Your existing content for 'product-management' */}
+            <h2>Product Management</h2>
+            {/* ... rest of the content ... */}
+          </div>
+        )}
+        {activeSection === 'stock-list' && (
+          <div>
+            {/* Your existing content for 'stock-list' */}
+            <h2>Stock List</h2>
+            {/* ... rest of the content ... */}
+          </div>
+        )}
+        {activeSection === 'transaction-management' && (
+          <div>
+            {/* Your existing content for 'transaction-management' */}
+            <h2>Transaction Management</h2>
+            {/* ... rest of the content ... */}
+          </div>
+        )}
+        {activeSection === 'transaction-report' && (
+          <div>
+            {/* Your existing content for 'transaction-report' */}
+            <h2>Transaction Report</h2>
+            {/* ... rest of the content ... */}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
